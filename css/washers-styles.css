@@ -1,0 +1,191 @@
+/* Variables */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #2980b9;
+    --accent-color: #e8f0f2;
+    --highlight-color: #3498db;
+    --text-color: #333;
+    --light-text-color: #5d6d7e;
+    --white-color: #ffffff;
+    --header-bg: var(--primary-color);
+    --footer-bg: var(--primary-color);
+    --table-header-bg: var(--secondary-color);
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-color);
+    color: var (--text-color);
+}
+
+/* Header Styling */
+.header {
+    background-color: var(--header-bg);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header img {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Content Section Styling */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-circle {
+    font-size: 150px;
+    color: var(--white-color);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    background-image: url('/images/washer.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 60px 0;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid var(--light-text-color);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--table-header-bg);
+    color: var(--white-color);
+}
+
+tr:hover {
+    background-color: var(--accent-color);
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--white-color);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+}
+
+.footer-section p, .footer-section ul, .footer-section li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-section ul {
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--highlight-color);
+}
+
+.social-icons {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-section {
+        flex: 1 1 45%;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    .social-icons a {
+        width: 50px;
+        margin: 10px;
+    }
+}
